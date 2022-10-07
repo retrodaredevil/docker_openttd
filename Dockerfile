@@ -1,8 +1,8 @@
 # BUILD ENVIRONMENT
 FROM debian:stable-slim AS ottd_build
 
-ARG OPENTTD_VERSION="1.10.1"
-ARG OPENGFX_VERSION="0.6.0"
+ARG OPENTTD_VERSION="12.2"
+ARG OPENGFX_VERSION="0.7.1"
 
 # Get things ready
 RUN mkdir -p /config \
@@ -47,7 +47,7 @@ RUN mkdir -p /app/data/baseset/ \
 # DEPLOY ENVIRONMENT
 
 FROM debian:stable-slim
-ARG OPENTTD_VERSION="1.10.1"
+ARG OPENTTD_VERSION="12.2"
 LABEL org.label-schema.name="OpenTTD" \
       org.label-schema.description="Lightweight build of OpenTTD, designed for server use, with some extra helping treats." \
       org.label-schema.url="https://github.com/ropenttd/docker_openttd" \
